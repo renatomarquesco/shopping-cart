@@ -1,0 +1,44 @@
+.first-row{
+    margin-top: 90px;
+}
+.top-row{
+    margin-top: 40px;
+}
+#input-item{
+    margin-left: 10px;
+    width: 300px;
+    padding-left: 10px;
+}
+#input-price{
+    margin-left:10px ;
+    padding-left: 05px;
+    margin-top: 4px;
+}
+#input-qty{
+    margin-left: 3px;
+    padding-left: 2px;
+    margin-top: 4px;
+}
+#btn-add{
+    color: rgb(4, 49, 4);
+    background-color: rgb(175, 204, 175);
+    border: 0.2px solid rgb(134, 141, 134);
+}
+#span-add{
+    margin-top: 5px;
+}
+.calculation-row{
+    margin-top: 60px;
+}
+#btn-calculate{
+    color: darkslategrey;
+    background-color: rgb(171, 221, 221);
+    border:0.2px solid lightseagreen;
+}
+
+.container{
+    border:none;
+}
+.div-to-add{
+    margin-top: 30px;
+}
