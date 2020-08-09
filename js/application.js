@@ -8,10 +8,12 @@ var inputQty = $("#input-qty");
 var btnAdd = $("#btn-add");
 var divToAdd = $(".div-to-add");
 var btnCalculate = $("#btn-calculate")
+var totalAmount = $("#total")
 
 
 // Variable to store the subtotal amounts
 var storeSubtotal = [];
+var sumSubtotal = 0;
 
 $(document).on("click","#btn-add" , function (){
 
@@ -45,20 +47,26 @@ $(document).on("click","#btn-add" , function (){
 
     createBtn.click(function(){
        $(this).parent().parent().remove();
-       
+       storeSubtotal.push(-subtotalAmount)
+      
     })
-    
- 
 
  
-
-
-
-
-
-
-
-   
 
 })
+
+
+btnCalculate.click(function calculateTotal(){
+    
+    for(var i= 0; i<storeSubtotal.length; i++){
+        sumSubtotal+= storeSubtotal[i];
+   
+        }
+   
+         totalAmount.text(sumSubtotal);
+         sumSubtotal =0;
+    
+
+})
+
 })
