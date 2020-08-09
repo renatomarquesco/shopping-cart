@@ -20,24 +20,25 @@ $(document).on("click","#btn-add" , function (){
     var createRow = ($('<div>', {class: 'row row-added'}));
     createRow.prependTo(divToAdd);
 
-    var createdivItem=($('<div>', {class: 'col-lg-5 div-item'}));
+    var createdivItem=($('<div>', {class: 'col-lg-5 col-2 div-item'}));
     createdivItem.prependTo(createRow);
     createdivItem.text(inputItem.val())
 
-    var createdivPrice= ($('<div>', {class: 'col-lg-2 div-price'}));
+    var createdivPrice= ($('<div>', {class: 'col-2 div-price'}));
     createdivPrice.insertAfter(createdivItem)
     createdivPrice.text(inputPrice.val())
 
-    var createdivQty= ($('<div>', {class: 'col-lg-1 div-qty'}));
+    var createdivQty= ($('<div>', {class: 'col-1 div-qty'}));
     createdivQty.insertAfter(createdivPrice)
     createdivQty.text(inputQty.val())
 
-    var createdivBtnRemove= ($('<div>', {class: 'col-lg-2 div-btn-remove'}));
-    var createBtn = ($('<button>Remove</button>', {id:"remove-btn"}));
+    var createdivBtnRemove= ($('<div>', {class: 'col-2 div-btn-remove'}));
+    var createBtn = ($('<button>Remove</button>'));
+    createBtn.addClass("remove-btn btn")
     createdivBtnRemove.insertAfter(createdivQty)
     createBtn.appendTo(createdivBtnRemove);
 
-    var createdivSubtotal= ($('<div>', {class: 'col-lg-2 div-subtotal'}));
+    var createdivSubtotal= ($('<div>', {class: 'col-lg-2 col-5 div-subtotal'}));
     createdivSubtotal.insertAfter(createdivBtnRemove)
     var subtotalAmount= Number(inputPrice.val()) * Number(inputQty.val());
     console.log(subtotalAmount)
@@ -47,26 +48,35 @@ $(document).on("click","#btn-add" , function (){
 
     createBtn.click(function(){
        $(this).parent().parent().remove();
-       storeSubtotal.push(-subtotalAmount)
+       storeSubtotal.push(-subtotalAmount);
+
+
+       if(!totalAmount.text("")){
+           calculateTotal();
+       }
       
     })
 
+    inputItem.val("")
+    inputPrice.val("")
+    inputQty.val("")
  
 
 })
 
 
-btnCalculate.click(function calculateTotal(){
+var calculateTotal = function(){
     
     for(var i= 0; i<storeSubtotal.length; i++){
         sumSubtotal+= storeSubtotal[i];
    
         }
    
-         totalAmount.text(sumSubtotal);
+         totalAmount.text("$" + sumSubtotal);
          sumSubtotal =0;
-    
 
-})
+}
+
+btnCalculate.click(calculateTotal)
 
 })
