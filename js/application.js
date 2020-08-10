@@ -53,7 +53,7 @@ $(document).ready(function () {
         createdivSubtotal.insertAfter(createdivBtnRemove)
         var subtotalAmount = Number(inputPrice.val()) * Number(inputQty.val());
         console.log(subtotalAmount)
-        createdivSubtotal.text("Subtotal: $" + subtotalAmount)
+        createdivSubtotal.text("Subtotal: $" + subtotalAmount.toFixed(2) )
         storeSubtotal.push(subtotalAmount)
         console.log(storeSubtotal)
 
@@ -75,7 +75,7 @@ $(document).ready(function () {
         for (var i = 0; i < storeSubtotal.length; i++) {
             sumSubtotal += storeSubtotal[i];
         }
-        totalAmount.text("$ " + sumSubtotal);
+        totalAmount.text("$ " + sumSubtotal.toFixed(2));
         sumSubtotal = 0;
     }
 
