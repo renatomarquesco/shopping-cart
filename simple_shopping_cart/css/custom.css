@@ -1,0 +1,152 @@
+body {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: 400;
+    background-color: rgb(243, 243, 243);
+}
+
+h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+.first-row {
+    margin-top: 90px;
+}
+
+.first-row span {
+    font-size: 22px;
+}
+
+.first-row button {
+    font-size: 20px;
+}
+
+.top-row {
+    margin-top: 40px;
+}
+
+#input-item {
+    margin-left: 10px;
+    /* width: 200px; */
+    padding-left: 10px;
+}
+
+#input-price {
+    margin-left: 10px;
+    padding-left: 05px;
+    margin-top: 4px;
+}
+
+#input-qty {
+    margin-left: 3px;
+    padding-left: 2px;
+    margin-top: 4px;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    cursor:pointer;
+    display:block;
+    color: rgb(133, 197, 171);
+}
+
+#btn-add {
+    color: rgb(4, 49, 4);
+    background-color: rgb(175, 204, 175);
+    border: 0.2px solid rgb(134, 141, 134);
+    text-transform: uppercase;
+}
+
+#span-add {
+    margin-top: 5px;
+}
+
+.calculation-row {
+    margin-top: 60px;
+}
+
+#btn-calculate {
+    color: darkslategrey;
+    background-color: rgb(171, 221, 221);
+    border: 0.2px solid lightseagreen;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.container {
+    border: none;
+}
+
+.div-to-add {
+    margin-top: 30px;
+}
+
+.remove-btn {
+    background-color: rgb(221, 129, 129);
+    color: black;
+    border: 0.2px solid rgb(34, 31, 31);
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.row-added {
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 45px;
+}
+
+@media(max-width:992px) {
+    #btn-calculate {
+        max-height: 40px;
+        font-size: 15px;
+        margin-top: 7px;
+        padding-top: 0px;
+
+    }
+
+    .row-added {
+        border-bottom: 0.2px solid rgb(218, 214, 214);
+        padding-bottom: 5px;
+        text-align: center;
+    }
+
+    .row-added button {
+        font-size: 16px;
+        height: 22px;
+        padding-top: 0px;
+
+    }
+
+    .div-add-btn {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .div-input-center {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    #input-price {
+        margin-left: -4px;
+    }
+
+    input[type=number]::-webkit-inner-spin-button { 
+        cursor:pointer;
+        display:block;
+        width:8px;
+        color: #333;
+        text-align:center;
+        position:relative;}
+
+    #input-qty {
+        margin-left: -5px;
+    }
+
+    #input-item {
+        justify-content: center;
+    }
+
+}
